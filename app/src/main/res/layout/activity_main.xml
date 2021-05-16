@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtProdId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_prod_id"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_margin="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGetProdInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_product"
+        android:textSize="@dimen/textsize"
+        android:layout_margin="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtProdId"/>
+
+    <Button
+        android:id="@+id/btnGetAllProd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_all_prods"
+        android:textSize="@dimen/textsize"
+        android:layout_margin="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGetProdInfo"/>
+
+    <GridLayout
+        android:id="@+id/gridProdInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:useDefaultMargins="true"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/padding"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGetAllProd">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prod_id"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/textsize"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prod_name"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/textsize"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prod_price"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/textsize"/>
+
+        <TextView
+            android:id="@+id/txt_prodId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/textsize"/>
+
+        <TextView
+            android:id="@+id/txt_prodName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/textsize"/>
+
+        <TextView
+            android:id="@+id/txt_prodPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/textsize"/>
+
+    </GridLayout>
+
+    <ImageView
+        android:id="@+id/imgFromServer"
+        android:layout_width="400dp"
+        android:layout_height="600dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_margin="@dimen/margin"
+        android:alpha="0.3"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
